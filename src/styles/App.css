@@ -1,7 +1,7 @@
 /* LAYOUT CONTAINERS */
 .banner-wrapper,
 .header-wrapper,
-.video-demo, .solar-system-table {
+.video-demo, .solar-system-table, .form-filling-section {
   max-width: 1440px;
   padding-left: 8%;
   padding-right: 8%;
@@ -282,8 +282,6 @@ table,
   margin: 0;
   border-radius: 20px;
 }
- 
-
 
 
 
