@@ -1,5 +1,5 @@
 import React from 'react';
-import planetData from '../planetData';
+import planetData from './planetData';
 
 const PlanetaryFactsAtGlance = () => {
    // Separate data safely based on planet groupings
