@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./styles/App.css";
+import "./styles/index.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
