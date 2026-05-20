@@ -86,6 +86,7 @@ h1 {
   top: -30px;
 }
 
+
 /* HOW IT WORKS SECTION */
 
 .how-it-works {
@@ -135,14 +136,6 @@ h1 {
 
 .video-demo h2 {
   margin-bottom: 4px;
-}
-
-.planet-diff p,
-.solar-system-table p,
-.form-filling-section p {
-  color: #0f2a44;
-  font-size: 18px;
-  line-height: 150%;
 }
 
 .video-demo {
@@ -424,6 +417,48 @@ form {
   color: #e51936;
 }
 
+/* BUTTONS & CTA */
+ 
+.primary-button {
+  padding: 14px 28px;
+  border: none;
+  color: white;
+  background-color: #164baf;
+}
+
+.shared-features {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  border-radius: 8px;
+  transition:
+    transform 400ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    box-shadow 400ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-color 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+ 
+.primary-button:hover {
+  box-shadow: 0 4px 12px rgba(74, 123, 167, 0.3);
+}
+ 
+.outline-button {
+  display: inline-block;
+  margin-left: 16px;
+  color: #dddddd;
+  background-color: transparent;
+  padding: 14px 43px;
+  text-decoration: none;
+  border: 0.5px solid #dddddd;
+}
+ 
+.outline-button:hover {
+  animation: pop 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: #164baf;
+  background-color: white;
+}
+
 .submit-btn {
   margin-top: 48px;
   padding: 8px 6px;
@@ -444,7 +479,31 @@ form {
     transform 600ms cubic-bezier(0.075, 0.82, 0.165, 1),
     background-color 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
+ 
+.submit-btn span {
+  color: white;
+}
+ 
+.submit-btn:hover .right-arrow {
+  transform: translateX(3px);
+}
+ 
+.submit-btn .right-arrow {
+  transition: transform 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+ 
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(74, 123, 167, 0.3);
+}
+ 
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.12); }
+  70% { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+ 
 .submit-btn span {
   color: white;
 }
