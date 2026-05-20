@@ -44,3 +44,41 @@ body {
   margin: 0;
   color: black;
 }
+
+
+/* PLANET CARD */
+.planet-card {
+  background-color: #0f2a44;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #1e4a7a;
+  transition: all 0.3s ease;
+}
+
+.planet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.planet-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.planet-info {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.planet-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.35rem;
+}
+
+.planet-info p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
