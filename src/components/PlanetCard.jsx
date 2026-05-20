@@ -1,25 +1,18 @@
-
-// const PlanetCard = () => {
-//   return (
-//     <div>PlanetCard</div>
-//   )
-// }
-
-// export default PlanetCard
-
-import React from 'react';
-
-const PlanetCard = ({ name, distance_from_sun, image }) => {
+const PlanetCard = ({ planet, distanceFromSun, image }) => {
   return (
     <figure className="planet-card">
-      <img 
-        src={image} 
-        alt={name}
-        className="planet-image"
-      />
+      <div className="bg-sync">
+        <img
+          src={image}
+          alt={planet}
+          className="planet-img"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
       <figcaption className="planet-info">
-        <h3>{name}</h3>
-        <p>{distance_from_sun} million km from the Sun</p>
+        <h3>{planet}</h3>
+        <p>{distanceFromSun} million km from the Sun</p>
       </figcaption>
     </figure>
   );
