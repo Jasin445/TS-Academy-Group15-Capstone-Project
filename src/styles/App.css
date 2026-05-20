@@ -173,6 +173,13 @@ small {
   line-height: 150%;
 }
 
+.planet-diff p {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
 /* SOLAR SYSTEM TABLE */
 
 .solar-system-table h2,
