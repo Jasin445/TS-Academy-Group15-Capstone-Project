@@ -5,10 +5,7 @@ import useToast from "./use-toast";
 
 const BASE_URL = "https://whitebricks.com/tsacademy.php";
 
-export const API_URL =
-  process.env.NODE_ENV === "development"
-    ? `https://corsproxy.io/?${encodeURIComponent(BASE_URL)}`
-    : BASE_URL;
+export const API_URL = `https://corsproxy.io/?${encodeURIComponent(BASE_URL)}`;
 
 const useSubmitForm = () => {
   const [formData, setFormData] = useState({
