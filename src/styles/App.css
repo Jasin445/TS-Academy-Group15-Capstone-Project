@@ -328,7 +328,8 @@ table,
   border-top-right-radius: 30px;
   display: block;
   transition: transform 0.4s ease;
-  height: 400px;
+  height: 340px;
+  overflow: hidden;
   cursor: pointer;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -336,6 +337,8 @@ table,
 
 .object-fit {
   object-fit: contain;
+  height:400px;
+  overflow: hidden;
 }
 
 .planet-info {
