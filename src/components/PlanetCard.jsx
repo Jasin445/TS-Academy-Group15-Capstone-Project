@@ -1,25 +1,24 @@
+import { useState } from "react";
+import FALLBACK_IMAGE from "../assets/images/fallback-img.png";
 
-// const PlanetCard = () => {
-//   return (
-//     <div>PlanetCard</div>
-//   )
-// }
+const PlanetCard = ({ planet, distanceFromSun, image }) => {
+  const [imgSrc, setImgSrc] = useState(image);
 
-// export default PlanetCard
-
-import React from 'react';
-
-const PlanetCard = ({ name, distance_from_sun, image }) => {
   return (
     <figure className="planet-card">
-      <img 
-        src={image} 
-        alt={name}
-        className="planet-image"
-      />
+      <div className="bg-sync">
+        <img
+          src={imgSrc}
+          alt={planet}
+          className="planet-img"
+          width={400}
+          height={225}
+          onError={() => setImgSrc(FALLBACK_IMAGE)}
+        />
+      </div>
       <figcaption className="planet-info">
-        <h3>{name}</h3>
-        <p>{distance_from_sun} million km from the Sun</p>
+        <h3>{planet}</h3>
+        <p>{distanceFromSun} million km from the Sun</p>
       </figcaption>
     </figure>
   );

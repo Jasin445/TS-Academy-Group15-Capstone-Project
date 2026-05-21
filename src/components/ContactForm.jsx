@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import UseSubmitForm from "../hooks/use-submit-form";
+import useSubmitForm from "../hooks/use-submit-form";
 import Input from "./ui/Input";
 import { Button } from "./ui/Button";
 import { ChevronRight } from "lucide-react";
 
 const ContactForm = () => {
-  const { formData, setFormData, handleChange, handleSubmit, errors } = UseSubmitForm();
+  const { formData, setFormData, handleChange, handleSubmit, errors, isSubmitting } = useSubmitForm();
 
   return (
     <section className="form-filling-section">
@@ -79,7 +79,7 @@ const ContactForm = () => {
         </div>
 
         <Button variant="default" className="submit-btn" type="submit">
-          <span>Submit</span>
+          <span>{isSubmitting ? "Submitting..." : "Submit"}</span>
           <ChevronRight size={16} className="right-arrow" />
         </Button>
       </form>

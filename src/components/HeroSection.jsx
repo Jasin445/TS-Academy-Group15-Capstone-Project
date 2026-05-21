@@ -17,7 +17,10 @@ const HeroSection = () => {
             </p>
 
             {/* This CTA button part of the task is for member 4 */}
-            
+            <div className="cta-btns">
+                  <Button variant="default"> Explore the Data</Button>
+                  <Button variant="outline"> Contact Us</Button>
+                </div>
           </div>
           <div className="hero-img">
             <img
