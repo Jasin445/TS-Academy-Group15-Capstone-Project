@@ -4,7 +4,9 @@
 .video-demo,
 .solar-system-table,
 .form-filling-section,
-.photo-proof {
+.photo-proof,
+.footer-i,
+.footer-ii {
   max-width: 1440px;
   padding-left: 8%;
   padding-right: 8%;
@@ -85,7 +87,6 @@ h1 {
   right: -8%;
   top: -30px;
 }
-
 
 /* HOW IT WORKS SECTION */
 
@@ -425,7 +426,7 @@ form {
 }
 
 /* BUTTONS & CTA */
- 
+
 .primary-button {
   padding: 14px 28px;
   border: none;
@@ -445,11 +446,11 @@ form {
     box-shadow 400ms cubic-bezier(0.075, 0.82, 0.165, 1),
     background-color 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
- 
+
 .primary-button:hover {
   box-shadow: 0 4px 12px rgba(74, 123, 167, 0.3);
 }
- 
+
 .outline-button {
   display: inline-block;
   margin-left: 16px;
@@ -459,7 +460,7 @@ form {
   text-decoration: none;
   border: 0.5px solid #dddddd;
 }
- 
+
 .outline-button:hover {
   animation: pop 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
   color: #164baf;
@@ -486,33 +487,37 @@ form {
     transform 600ms cubic-bezier(0.075, 0.82, 0.165, 1),
     background-color 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
- 
+
 .submit-btn span {
   color: white;
 }
- 
+
 .submit-btn:hover .right-arrow {
   transform: translateX(3px);
 }
- 
+
 .submit-btn .right-arrow {
   transition: transform 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
- 
+
 .submit-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(74, 123, 167, 0.3);
 }
- 
+
 @keyframes pop {
-  0% { transform: scale(1); }
-  40% { transform: scale(1.12); }
-  70% { transform: scale(0.96); }
-  100% { transform: scale(1); }
-}
- 
-.submit-btn span {
-  color: white;
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+  70% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .submit-btn:hover .right-arrow {
@@ -526,6 +531,55 @@ form {
 .submit-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(74, 123, 167, 0.3);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #051540;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+ 
+footer hr {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 85%;
+  margin: auto;
+}
+ 
+.footer-ii {
+  margin-top: 48px;
+}
+
+.footer-i h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 18px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+ 
+.footer-i p {
+  color: white;
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+ 
+.footer-ii span {
+  color: #ffffff;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 .toast-success-brand,
