@@ -3,6 +3,13 @@ import { z } from "zod";
 import formSchema from "../validator/form-validator";
 import useToast from "./use-toast";
 
+const BASE_URL = "https://whitebricks.com/tsacademy.php";
+
+export const API_URL =
+  process.env.NODE_ENV === "development"
+    ? `https://corsproxy.io/?${encodeURIComponent(BASE_URL)}`
+    : BASE_URL;
+
 const useSubmitForm = () => {
   const [formData, setFormData] = useState({
     fullname: "",
@@ -38,7 +45,7 @@ const useSubmitForm = () => {
 
   const submitForm = async (data, url) => {
     closeToast();
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     try {
       loadingToastHandler("Submitting your details...");
       const response = await fetch(url, {
@@ -62,8 +69,8 @@ const useSubmitForm = () => {
       console.error("Error submitting form:", error);
       errorToastHandler("An error occured while submitting form!");
       throw error;
-    }finally {
-      setIsSubmitting(false)
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -83,10 +90,7 @@ const useSubmitForm = () => {
 
     setErrors({});
     console.log("Form submitted:", formData);
-    submitForm(
-      formData,
-      `https://corsproxy.io/?${encodeURIComponent("https://whitebricks.com/tsacademy.php")}`,
-    );
+    submitForm(formData, API_URL);
     resetForm();
   };
 
@@ -96,7 +100,7 @@ const useSubmitForm = () => {
     setFormData,
     handleChange,
     handleSubmit,
-    isSubmitting
+    isSubmitting,
   };
 };
 
