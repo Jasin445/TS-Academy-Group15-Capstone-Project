@@ -71,7 +71,7 @@ const useSubmitForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const result = formSchema.safeParse(formData);
@@ -87,7 +87,7 @@ const useSubmitForm = () => {
 
     setErrors({});
     console.log("Form submitted:", formData);
-    submitForm(formData, API_URL);
+    await submitForm(formData, API_URL);
     resetForm();
   };
 
