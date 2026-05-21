@@ -2,7 +2,7 @@ import VideoPlayer from "./VideoPlayer"
 
 const HowPlanetaryDataHelps = () => {
   return (
-     <section className="how-it-works">
+     <section id="video-section" className="how-it-works">
           <div className="video-demo">
             <VideoPlayer />
             <div className="text-wrapper">

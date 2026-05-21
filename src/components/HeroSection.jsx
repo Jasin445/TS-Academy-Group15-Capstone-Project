@@ -18,8 +18,12 @@ const HeroSection = () => {
 
             {/* This CTA button part of the task is for member 4 */}
             <div className="cta-btns">
+                <a href="#video-section">
                   <Button variant="default"> Explore the Data</Button>
+                </a> 
+                <a href="#contact-section">
                   <Button variant="outline"> Contact Us</Button>
+                </a>    
                 </div>
           </div>
           <div className="hero-img">
