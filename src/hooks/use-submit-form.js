@@ -1,11 +1,8 @@
 import { useState } from "react";
-import { z } from "zod";
 import formSchema from "../validator/form-validator";
 import useToast from "./use-toast";
 
-const BASE_URL = "https://whitebricks.com/tsacademy.php";
-
-export const API_URL = `https://corsproxy.io/?${encodeURIComponent(BASE_URL)}`;
+const BASE_URL = "/api/contact";
 
 const useSubmitForm = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +12,9 @@ const useSubmitForm = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const {
     loadingToastHandler,
     errorToastHandler,
@@ -22,13 +22,18 @@ const useSubmitForm = () => {
     closeToast,
   } = useToast();
 
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: undefined }));
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: undefined,
+    }));
   };
 
   const resetForm = () => {
@@ -40,31 +45,37 @@ const useSubmitForm = () => {
     });
   };
 
-  const submitForm = async (data, url) => {
+  const submitForm = async (data) => {
     closeToast();
     setIsSubmitting(true);
+
     try {
       loadingToastHandler("Submitting your details...");
-      const response = await fetch(url, {
+      const payload = new FormData();
+
+      payload.append("fullname", data.fullname);
+      payload.append("email", data.email);
+      payload.append("phone", data.phone);
+      payload.append("message", data.message);
+
+      const response = await fetch(BASE_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        errorToastHandler("Failed to submit form");
-        throw new Error("Failed to submit form");
+        // errorToastHandler(`Request failed with status ${response.status}`);
+        throw new Error(`Request failed with status ${response.status}`);
       }
 
       successToastHandler("Your details have been submitted successfully!");
-
       return response;
     } catch (error) {
-      closeToast();
       console.error("Error submitting form:", error);
-      errorToastHandler("An error occured while submitting form!");
+      errorToastHandler("An error occurred while submitting the form.");
       throw error;
     } finally {
       setIsSubmitting(false);
@@ -78,16 +89,18 @@ const useSubmitForm = () => {
 
     if (!result.success) {
       const fieldErrors = {};
+
       result.error.issues.forEach((issue) => {
         fieldErrors[issue.path[0]] = issue.message;
       });
+
       setErrors(fieldErrors);
+
       return;
     }
 
     setErrors({});
-    console.log("Form submitted:", formData);
-    await submitForm(formData, API_URL);
+    await submitForm(formData);
     resetForm();
   };
 
