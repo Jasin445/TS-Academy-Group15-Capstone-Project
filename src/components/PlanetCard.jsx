@@ -10,7 +10,7 @@ const PlanetCard = ({ planet, distanceFromSun, image }) => {
     <figure className="planet-card">
       <div
         className="bg-sync "
-        style={hasError ? { backgroundColor: "#f0f0f0" } : {}}
+        style={hasError ? { backgroundColor: "#e9e9e9" } : {}}
       >
         <img
           src={imgSrc}

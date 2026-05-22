@@ -3,21 +3,16 @@ import useFetchPlanetsData from "../hooks/use-fetch-planet-data";
 import PlanetCard from "./PlanetCard";
 import PlanetCardSkeleton from "./PlanetCardSkeleton";
 import ErrorScreen from "./PlanetErrorScreen";
+import usePlanetDisplay from "../hooks/use-planet-display";
 
 const DifferenceBetweenPlanets = () => {
   const { planetsData, isLoading, error, setReftechTrigger } =
     useFetchPlanetsData();
-
-  useEffect(() => {
-    if (!planetsData) return;
-    planetsData.forEach((planet) => {
-      const img = new Image();
-      img.src = planet.image;
-    });
-  }, [planetsData]);
+  const { visiblePlanets, displayCount } = usePlanetDisplay(planetsData);
 
   return (
-    <section className="photo-proof">
+    <section className="diff-between-planets">
+      <div className="photo-proof">
       <div className="planet-diff">
         <h2>Visualizing the Differences Between Planets</h2>
         <p>
@@ -27,22 +22,23 @@ const DifferenceBetweenPlanets = () => {
         </p>
         <div className="gallery-grid">
           {isLoading ? (
-            Array.from({ length: 9 }).map((_, i) => (
+            Array.from({ length: displayCount }).map((_, i) => (
               <PlanetCardSkeleton key={i} />
             ))
           ) : error ? (
             <div className="error-wrapper">
               <ErrorScreen
                 onRetry={() => setReftechTrigger((prev) => prev + 1)}
-              />
+                />
             </div>
           ) : (
-            planetsData?.map((planet) => (
+            visiblePlanets?.map((planet) => (
               <PlanetCard key={planet.planet} {...planet} />
             ))
           )}
         </div>
       </div>
+          </div>
     </section>
   );
 };
