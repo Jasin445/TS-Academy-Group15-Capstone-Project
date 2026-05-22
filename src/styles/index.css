@@ -97,7 +97,7 @@ body {
   border: 1px solid #dbeafe !important;
 }
 
-@media (mwx-width: 520px) {
+@media (max-width: 520px) {
   .toast-success-brand,
 .toast-error-brand,
 .toast-loading-brand {
