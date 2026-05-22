@@ -96,3 +96,12 @@ body {
   color: #1a2340 !important;
   border: 1px solid #dbeafe !important;
 }
+
+@media (max-width: 520px) {
+  .toast-success-brand,
+.toast-error-brand,
+.toast-loading-brand {
+  white-space: wrap !important;
+  text-wrap: wrap !important;
+}
+}
