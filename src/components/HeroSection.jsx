@@ -1,7 +1,16 @@
+import React from "react";
 import { Button } from "./ui/Button";
-import heroImage from "../assets/images/hero-img.png"
+import heroImage from "../assets/images/hero-img.png";
 
 const HeroSection = () => {
+  // Smooth scroll handler to satisfy the PR requirement
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="hero-banner">
       <div className="banner-wrapper">
@@ -15,24 +24,19 @@ const HeroSection = () => {
               From size and mass to gravity and density, this page breaks down
               the solar system in a clear, data-driven way.
             </p>
-
-            {/* This CTA button part of the task is for member 4 */}
+            
             <div className="cta-btns">
-                <a href="#video-section">
-                  <Button variant="default"> Explore the Data</Button>
-                </a> 
-                <a href="#contact-section">
-                  <Button variant="outline"> Contact Us</Button>
-                </a>    
-                </div>
+              <Button variant="default" onClick={() => handleScroll("video-section")}>
+                Explore the Data
+              </Button>
+              <Button variant="outline" onClick={() => handleScroll("contact-section")}>
+                Contact Us
+              </Button>
+            </div>
           </div>
+
           <div className="hero-img">
-            <img
-              src={heroImage}
-              width="644px"
-              height="644px"
-              alt="hero image"
-            />
+            <img src={heroImage} width="644px" height="644px" alt="hero image" />
           </div>
         </div>
       </div>

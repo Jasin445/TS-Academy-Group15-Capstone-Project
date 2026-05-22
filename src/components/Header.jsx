@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from './NavBar'; 
 
 const Header = () => {
   return (
@@ -12,9 +11,6 @@ const Header = () => {
           alt="logo"
         />
       </div>
-      
-      {/* This renders your nav links on the right side of the header */}
-      <NavBar />
     </header>
   )
 }
