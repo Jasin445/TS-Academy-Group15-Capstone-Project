@@ -101,7 +101,7 @@ const PlanetaryFactsAtGlance = () => {
               </tr>
             ))}
 
-            {/* Dwarf Planets */}
+            {/* Dwarf Planets */} 
             {dwarfPlanets.map((planet, index) => (
               <tr key={planet.name}>
                 {index === 0 && (
