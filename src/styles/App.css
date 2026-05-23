@@ -986,18 +986,20 @@ footer hr {
 /* MEDIA QUERIES - SMALL MOBILE */
 
 @media (max-width: 480px) {
-  .primary-button {
-    width: 100%;
+  .primary-button, .outline-button {
+    text-wrap: nowrap;
+    width: 160.5px;
     padding: 12px 15px;
     font-size: 16px;
     flex: 1;
   }
 
-  .outline-button {
+   .submit-btn {
     width: 100%;
     padding: 12px 15px;
     font-size: 16px;
   }
+
 
   .gallery-grid img:first-child {
     border-top-left-radius: 45px;
@@ -1042,20 +1044,6 @@ footer hr {
     flex-wrap: wrap;
     text-wrap: nowrap;
     gap: 5%;
-  }
-
-  .outline-button,
-  .primary-button {
-    text-wrap: nowrap;
-  }
-
-  .outline-button {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .cta-btns button {
-    font-size: 14px;
   }
 
   .break-footer-note {
@@ -1113,11 +1101,23 @@ footer hr {
     padding: 10px 18px;
   }
 
-   .planet-diff {
+  .planet-diff {
     padding-left: 8px;
     padding-right: 8px;
   }
+}
 
+@media (max-width: 368px) {
+  .outline-button,
+  .primary-button {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .outline-button {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 }
 
 @media (max-width: 306px) {
