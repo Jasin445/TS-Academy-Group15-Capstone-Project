@@ -8,7 +8,7 @@ const ContactForm = () => {
   const { formData, setFormData, handleChange, handleSubmit, errors, isSubmitting } = useSubmitForm();
 
   return (
-    <section className="form-filling-section">
+    <section id="contactSection" className="form-filling-section">
       <h2>Have Questions About Planetary Science?</h2>
       <p>
         Interested in learning more about space, astronomy, or how planetary

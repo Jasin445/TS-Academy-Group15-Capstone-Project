@@ -1,5 +1,5 @@
 import { Button } from "./ui/Button";
-import heroImage from "../assets/images/hero-img.png"
+import heroImage from "../assets/images/hero-img.png";
 
 const HeroSection = () => {
   return (
@@ -16,11 +16,29 @@ const HeroSection = () => {
               the solar system in a clear, data-driven way.
             </p>
 
-            {/* This CTA button part of the task is for member 4 */}
+            {/* CTA button */}
             <div className="cta-btns">
-                  <Button variant="default"> Explore the Data</Button>
-                  <Button variant="outline"> Contact Us</Button>
-                </div>
+              <Button
+                onClick={() => {
+                  document
+                    .getElementById("solarSystemTable")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                variant="default"
+              >
+                Explore the Data
+              </Button>
+              <Button
+                onClick={() => {
+                  document
+                    .getElementById("contactSection")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                variant="outline"
+              >
+                Contact Us
+              </Button>
+            </div>
           </div>
           <div className="hero-img">
             <img

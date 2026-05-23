@@ -26,7 +26,7 @@ const dwarfPlanets = [
 
 const PlanetaryFactsAtGlance = () => {
   return (
-    <section className="solar-system-table">
+    <section className="solar-system-table" id="solarSystemTable">
       <h2>Planetary Facts at a Glance</h2>
       <p>
         Below is a comparative table of major planets in our solar system. The
