@@ -14,21 +14,14 @@ This is the capstone project for Group 15 of the Novara cohort at TS Academy. Th
 
 | Name | GitHub Profile |
 |------|----------------|
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
-| [Member Name] | [@username](https://github.com/username) |
+| Jason Dagana | Jasin445 (https://github.com/Jasin445) |
+| Mark O. Ojieabu | Macoj-dotcom (https://github.com/Macoj-dotcom) |
+| Bethel Amadi | amadibethel (https://github.com/amadibethel) |
+| Alexander Hotonu | AlexanderHotonu (https://github.com/AlexanderHotonu) |
+| Henry Igbozurike | mrigbozurike (https://github.com/mrigbozurike) |
+| Eugene Acheampong| NanaQwes (https://github.com/NanaQwes) |
+| Amira Abdulhamid | riyyah5 (https://github.com/riyyah5) |
+| Faith Ojo | ojofaith (https://github.com/ojofaith) |
 
 ---
 
@@ -36,13 +29,14 @@ This is the capstone project for Group 15 of the Novara cohort at TS Academy. Th
 
 | Component | Description | Contributor |
 |-----------|-------------|-------------|
-| `Header` | Logo and navigation links | [Member Name] |
-| `HeroSection` | Headline, subtext and Explore CTA button | [Member Name] |
-| `DifferenceBetweenPlanets` | Fetches planets from API and renders planet cards | [Member Name] |
-| `PlanetCard` | Displays individual planet — image, name, distance from sun | [Member Name] |
-| `VideoComponent` | Autoplay, muted, looping background video | [Member Name] |
-| `ContactForm` | Contact form with client-side validation and submission | [Member Name] |
-| `Footer` | Team description, TS Academy link, group repo link | [Member Name] |
+| `Header` | Logo and navigation links | Alexander Hotonu and Amadi Bethel |
+| `HeroSection` | Headline, subtext and Explore CTA button | Jason Dagana, Amira Abdulhamid |
+| `DifferenceBetweenPlanets` | Fetches planets from API and renders planet cards | Jason Dagana |
+| `PlanetaryFactsAtAGlance` | Construct solar system data table, styling and populate real data | Amira Abdulhamid, Alexander Hotonu and Jason Dagana |
+| `PlanetCard` | Displays individual planet — image, name, distance from sun | Henry Igbozurike |
+| `VideoComponent` | Autoplay, muted, looping background video | Eugene Acheampong |
+| `ContactForm` | Contact form with client-side validation and submission | Henry Igbozurike, Mark O. Ojieabu, Jason Dagana |
+| `Footer` | Team description, TS Academy link, group repo link | Jason Dagana, Mark O. Ojieabu, Faith Ojo|
 
 ---
 
@@ -83,17 +77,17 @@ This is the capstone project for Group 15 of the Novara cohort at TS Academy. Th
 
 ## 🚀 Live Deployment
 
-🔗 [View Live Project](https://your-deployment-link.vercel.app)
+🔗 [View Live Project](https://solar-system-group-15.vercel.app)
 
-> Hosted on Netlify / Vercel
+> Hosted on Vercel
 
 ---
 
 ## 🔗 Links
 
 - 🏫 [TS Academy](https://tsacademyonline.com/)
-- 📁 [Group Repository](https://github.com/Jasin445/solar-system-explorer)
-
+- 📁 [Group Repository](https://github.com/Jasin445/TS-Academy-Group15-Capstone-Project)
+- 
 ---
 
 ## 🔄 Git Workflow
