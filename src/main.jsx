@@ -3,12 +3,15 @@ import { createRoot } from 'react-dom/client'
 import './styles/index.css'
 import App from './App.jsx'
 import { SnackbarProvider } from "notistack";
+import { BrowserRouter } from 'react-router-dom';
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <BrowserRouter>
     <SnackbarProvider maxSnack={3}>
     <App />
     </SnackbarProvider>
+    </BrowserRouter>
   </StrictMode>,
 )
