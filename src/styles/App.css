@@ -693,6 +693,16 @@ footer hr {
   padding-bottom: 80px;
 }
 
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: bold;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
