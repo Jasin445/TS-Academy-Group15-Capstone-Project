@@ -14,7 +14,7 @@ const Footer = () => {
         <span>©2026 Design by Amaka & Ifeoma A. </span>
         <div className="flex">
           <span>
-            Built by{" "}
+            Built by{" Jason Dagana, Mark O. Ojieabu, Bethel Amadi, Alexander Hotonu, Henry Igbozurik, Eugene Acheampong, Amira Abdulhamid, Faith Ojo  "}
             <Link
               to={
                 "https://github.com/Jasin445/TS-Academy-Group15-Capstone-Project"
