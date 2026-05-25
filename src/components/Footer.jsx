@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className="footer-i">
         <h3>About</h3>
-        <p>first name of group members</p>
+        <p>To God be the glory, this project was designed by Jason Dagana (Captain), Mark O. Ojieabu, Bethel Amadi, Alexander Hotonu, Henry Igbozurik, Eugene Acheampong, Amira Abdulhamid, Faith Ojo</p>
       </div>
 
       <hr />
@@ -14,7 +14,7 @@ const Footer = () => {
         <span>©2026 Design by Amaka & Ifeoma A. </span>
         <div className="flex">
           <span>
-            Built by{" Jason Dagana, Mark O. Ojieabu, Bethel Amadi, Alexander Hotonu, Henry Igbozurik, Eugene Acheampong, Amira Abdulhamid, Faith Ojo  "}
+            Built by{" "}
             <Link
               to={
                 "https://github.com/Jasin445/TS-Academy-Group15-Capstone-Project"
