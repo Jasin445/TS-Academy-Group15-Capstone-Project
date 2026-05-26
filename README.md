@@ -20,6 +20,7 @@ This is the capstone project for Group 15 of the Novara cohort at TS Academy. Th
 | Alexander Hotonu | AlexanderHotonu (https://github.com/AlexanderHotonu) |
 | Henry Igbozurike | mrigbozurike (https://github.com/mrigbozurike) |
 | Eugene Acheampong| NanaQwes (https://github.com/NanaQwes) |
+| Onifade Moses| BiqqMax (https://github.com/BiqqMax) |
 | Amira Abdulhamid | riyyah5 (https://github.com/riyyah5) |
 | Faith Ojo | ojofaith (https://github.com/ojofaith) |
 
@@ -36,7 +37,8 @@ This is the capstone project for Group 15 of the Novara cohort at TS Academy. Th
 | `PlanetCard` | Displays individual planet — image, name, distance from sun | Henry Igbozurike |
 | `VideoComponent` | Autoplay, muted, looping background video | Eugene Acheampong |
 | `ContactForm` | Contact form with client-side validation and submission | Henry Igbozurike, Mark O. Ojieabu, Jason Dagana |
-| `Footer` | Team description, TS Academy link, group repo link | Jason Dagana, Mark O. Ojieabu, Faith Ojo|
+| `Footer` | Team description, TS Academy link, group repo link | Jason Dagana, Mark O. Ojieabu |
+| Quality Assurance Test | Team members who carried out thorough tests for errors and bugs | Onifade Moses, Ojo Faith |
 
 ---
 
