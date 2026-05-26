@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className="footer-i">
         <h3>About</h3>
-        <p>To God be the glory, this project was designed by Jason Dagana (Captain), Mark O. Ojieabu, Bethel Amadi, Alexander Hotonu, Henry Igbozurik, Eugene Acheampong, Amira Abdulhamid, Faith Ojo</p>
+        <p>To God be the glory, this project was developed by Jason Dagana (Team Lead), Mark O. Ojieabu, Bethel Amadi, Alexander Hotonu, Henry Igbozurik, Eugene Acheampong, Onifade Moses, Amira Abdulhamid, Faith Ojo</p>
       </div>
 
       <hr />
